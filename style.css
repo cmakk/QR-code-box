@@ -1,0 +1,55 @@
+:root {
+	--white: hsl(0, 0%, 100%);
+	--light-gray: hsl(212, 45%, 89%);
+	--grayish-blue: hsl(220, 15%, 75%);
+	--dark-blue: hsl(218, 44%, 22%);
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	font-family: 'Outfit', sans-serif;
+	background-color: #d5e1ef;  /* fallback colour */
+	background-color: var(--light-gray);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+h1 {
+	font-size: 22px; 
+	font-weight: 700px; 
+	text-align: center;
+}
+
+p {
+	font-size: 15px;
+	font-weight: 400;
+	text-align: center;
+}
+
+.QRcard {
+	border-radius: 10px;
+	background-color: #000;  /* fallback colour */
+	background-color: var(--white);
+	box-shadow: 20px 20px 50px var(--grayish-blue);
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	width: 25ch;
+}
+
+.QRcode img {
+	width: 100%;
+	height: auto;
+	border-radius: 5px;
+}
+
+@media only screen and (max-width: 675px) and (orientation: portrait) {
+	.QRcard {
+		width: 85%;
+	}
+}
